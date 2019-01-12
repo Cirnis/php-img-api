@@ -66,7 +66,8 @@ die('{"code":"error","msg":Parameter error or type mismatch."}');
 }
 
 //判断是否是通过HTTP POST上传的
-if(!is_uploaded_file($file['tmp_name'])){
+if(!is_uploaded_file($file['tmp_name']))
+{
 //如果不是通过HTTP POST上传的
 file_put_contents($iii, "[IP:$ip] [Time:$time] [State:Fuck!] [Msg:你正常点 我很害怕!]\r\n", FILE_APPEND);  
 die("<h3>你正常点 我很害怕!</h3>");
