@@ -62,7 +62,7 @@ chmod('./img/'.$ooo.'/',0777);
 if(!in_array($type, $allow_type)){
 //如果不被允许，则直接停止程序运行
 file_put_contents($iii, "[IP:$ip] [Time:$time] [State:error] [Msg:Parameter error or type mismatch.]\r\n", FILE_APPEND);
-die('{"code":"error","msg":Parameter error or type mismatch."}');
+die('{"code":"error","msg":"Parameter error or type mismatch."}');
 }
 
 //判断是否是通过HTTP POST上传的
