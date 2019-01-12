@@ -13,8 +13,9 @@ HTML调用例子
     <input type="submit" name="upfile" value="Upload"/>
 </form>
 </html>
-*/
 
+*/
+header('Access-Control-Allow-Origin:*');
 header('Content-type:text/json');
 
 //网站域名 格式 http://www.Baidu.com/ 最前必须带http头，最后必须带/
@@ -38,7 +39,7 @@ $newfile = md5(uniqid(microtime())) . '.' . $fileArr[1];//图片重命名
 //判断传输为空
 if(empty($_POST)){
 file_put_contents($iii, "[IP:$ip] [Time:$time] [Msg:Access Denied :)]\r\n", FILE_APPEND);
-die('<h3>Access Denied :)</h3>');
+die('Access Denied :)');
 }
 
 //文件大小设置 单位字节Bytes
@@ -66,11 +67,10 @@ die('{"code":"error","msg":"Parameter error or type mismatch."}');
 }
 
 //判断是否是通过HTTP POST上传的
-if(!is_uploaded_file($file['tmp_name']))
-{
+if(!is_uploaded_file($file['tmp_name'])){
 //如果不是通过HTTP POST上传的
 file_put_contents($iii, "[IP:$ip] [Time:$time] [State:Fuck!] [Msg:你正常点 我很害怕!]\r\n", FILE_APPEND);  
-die("<h3>你正常点 我很害怕!</h3>");
+die("Not allowed POST mode!");
 }
 
 //上传文件的存放路径
@@ -79,7 +79,7 @@ $upload_path = "./img/".$ooo."/";
 //开始移动文件到相应的文件夹
 if(move_uploaded_file($file['tmp_name'],$upload_path.$newfile))
 {
-echo '{"code":"success","msg":"Successful upload of files.","path":"'.$upload_path.'","url":"'.$site.$ooo.'/'.$newfile.'","ip":"'.$ip.'","time":"'.$time.'","size":"'.$size.'","name":"'.$name.'"}';
+echo '{"code":"success","msg":"Successful upload of files.","path":"'.$upload_path.'","url":"'.$site.'img/'.$ooo.'/'.$newfile.'","ip":"'.$ip.'","time":"'.$time.'","size":"'.$size.'","name":"'.$name.'"}';
 file_put_contents($iii, "[IP:$ip] [Time:$time] [State:Upload files success] [ImgUrl:$site$ooo/$newfile]\r\n", FILE_APPEND);
 //var_dump($_FILES['upfile']); 用来打印数据 调试用的 可以删除
 }
