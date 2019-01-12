@@ -11,24 +11,14 @@
 
 ------------
 
-### 功能
-- ### 演示
-![Test](https://raw.githubusercontent.com/Cirnis/php-img-api/master/test.png "Test")
-
-------------
-
 ### 项目
-
 
 1. 名称 ： PHP上传图片API
 1. Author ： Syie</font>
 1. Mial ： outdie@qq.com
 1. QQ ： 2637896409
 
-
 ------------
-
-
 
 ### 功能
 - HTML可对接文件，实现上传(废话)
