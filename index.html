@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>千失图片API系统</title>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.form.js"></script>
+    <script src="./js/qmoe.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body background="https://ww2.sinaimg.cn/large/a15b4afegy1fpp139ax3wj200o00g073.jpg">
+            <div class="container" style="padding-top:90px;">
+                    <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 center-block text-center" style="float: none;">
+                        <div class="panel panel-danger" style="border-radius:15px 15px 0 0;"" >
+                            <div class="panel-heading" style="width:100%;background-color: #3174ed;background-image: linear-gradient(90deg, #3174ed 0%, #FA8BFF 35%, #3fd9fb 88%);color:#FFFFFF;border-radius:15px 15px 0 0;">图床API〃'▽'〃</font></div>
+                            <div class="panel-body text-center" align="center" style="-webkit-transition: all .2s cubic-bezier(0, 0, 0, 0.48);-moz-transition: all .2s ease;border:.0625rem solid #fafafa;background:#fafafa repeating-linear-gradient(-45deg,#fff,#fff 1.125rem,transparent 1.125rem,transparent 2.25rem);border-radius:5px;font-size:14px;color:#333;">
+                                <a href="http://wpa.qq.com/msgrd?v=3&uin=2637896409&site=qq&menu=yes">
+                                    <img class="img-circle m-b-xs" width="80" style="border: 2px solid skyblue;" src="https://qmoe.cn/avatar.png" alt="外链图床">
+                                </a>
+                                <p><font color="#fd4b5c">一差二错，三分愚昧。</font>
+                                <p/>
+                                <form action="./api.php" method="post" enctype="multipart/form-data" id="upform">
+                             <input type="file" class="form-control" name="upfile">
+                             <p style="color:#fd4b99" id="uperror"></p>
+                             <input type="submit" name="upfile" class="btn btn-default" value="上传(๑•̀ㅂ•́)و✧" id="btn">
+                                </form>
+                            </div>               
+<div id="show">
+<input id="linkurl" class="form-control panel panel-info" value="">
+<img class="img-responsive" id="imgurl" src="">
+</div>
+                            <div class="panel-footer text-center">
+                                <small><code id="hitokoto">(〃'▽'〃)获取中...</code></small>
+                            </div>
+                        </div>
+                    </div>
+      </div>
+<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+    </body>
+</html>
