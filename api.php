@@ -41,7 +41,6 @@ if(empty($_POST)){
 file_put_contents($iii, "[IP:$ip] [Time:$time] [Msg:Access Denied :)]\r\n", FILE_APPEND);
 die('Access Denied :)');
 }
-
 //文件大小设置 单位字节Bytes
 if($_FILES["upfile"]["size"] >= 1048576){
 file_put_contents($iii, "[IP:$ip] [Time:$time] [State:overrun] [Msg:Upload files beyond the limit!]\r\n", FILE_APPEND);
