@@ -6,7 +6,7 @@
 ### 项目
 1. 名称 ： PHP上传图片API
 1. Author ： Syie
-1. Mial ： outdie@qq.com
+1. Mail ： outdie@qq.com
 1. QQ ： 2637896409
 
 ------------
